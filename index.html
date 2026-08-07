@@ -1,0 +1,1598 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ebrahim Khaled — Real Estate, Leadership & Personal Brand">
+<title>Ebrahim Khaled | Real Estate & Leadership</title>
+
+<style>
+:root{
+--bg:#060606;
+--panel:#101010;
+--panel2:#151515;
+--gold:#c9a45b;
+--gold2:#ead08b;
+--white:#f7f4ec;
+--muted:#a8a49b;
+--line:rgba(255,255,255,.11)
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--white);
+line-height:1.65
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+img{
+max-width:100%;
+display:block
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:100;
+background:rgba(6,6,6,.72);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line)
+}
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.logo{
+font-weight:850;
+letter-spacing:.12em;
+text-transform:uppercase;
+font-size:14px
+}
+
+.logo span,
+.gold{
+color:var(--gold2)
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:26px
+}
+
+nav a{
+font-size:13px;
+color:#ddd;
+transition:.2s
+}
+
+nav a:hover{
+color:var(--gold2)
+}
+
+.lang{
+border:1px solid var(--line);
+background:transparent;
+color:#fff;
+border-radius:999px;
+padding:8px 13px;
+cursor:pointer;
+font-weight:700
+}
+
+.menu{
+display:none;
+border:1px solid var(--line);
+background:none;
+color:#fff;
+padding:8px 11px;
+border-radius:8px
+}
+
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:flex-end;
+overflow:hidden
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center 25%;
+filter:contrast(1.03) saturate(.82)
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.9),
+rgba(0,0,0,.52) 50%,
+rgba(0,0,0,.14)
+),
+linear-gradient(
+0deg,
+#060606 0%,
+transparent 40%
+)
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:175px 0 95px;
+max-width:760px
+}
+
+.eyebrow{
+font-size:11px;
+letter-spacing:.25em;
+color:var(--gold2);
+font-weight:800;
+text-transform:uppercase;
+margin-bottom:20px
+}
+
+h1{
+font-size:clamp(52px,8vw,104px);
+line-height:.9;
+letter-spacing:-.055em;
+margin-bottom:25px
+}
+
+.hero h1 span{
+color:var(--gold2)
+}
+
+.hero p{
+max-width:620px;
+font-size:19px;
+color:#d4d1ca
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:32px
+}
+
+.btn{
+padding:13px 22px;
+border-radius:999px;
+border:1px solid var(--gold);
+font-weight:800;
+font-size:13px;
+transition:.25s
+}
+
+.btn.primary{
+background:var(--gold);
+color:#080808
+}
+
+.btn:hover{
+transform:translateY(-2px)
+}
+
+.btn.secondary{
+border-color:rgba(255,255,255,.25)
+}
+
+section{
+padding:110px 0
+}
+
+.dark{
+background:#0b0b0b;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line)
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:40px;
+margin-bottom:48px
+}
+
+.kicker{
+font-size:11px;
+letter-spacing:.22em;
+color:var(--gold);
+font-weight:850;
+text-transform:uppercase
+}
+
+h2{
+font-size:clamp(38px,5vw,62px);
+line-height:1.03;
+letter-spacing:-.04em;
+margin-top:9px
+}
+
+.lead{
+max-width:550px;
+color:var(--muted);
+font-size:16px
+}
+
+.about{
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:70px;
+align-items:center
+}
+
+.about-img{
+width:100%;
+aspect-ratio:4/5;
+object-fit:cover;
+filter:grayscale(100%);
+border:1px solid var(--line)
+}
+
+.about-copy p{
+color:#c7c3bb;
+margin:18px 0;
+font-size:17px
+}
+
+.quote{
+border-left:2px solid var(--gold);
+padding:10px 0 10px 19px;
+margin-top:28px;
+font-size:22px;
+font-weight:700
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.card{
+min-height:240px;
+padding:30px;
+background:linear-gradient(145deg,#161616,#0c0c0c);
+border:1px solid var(--line);
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(201,164,91,.5)
+}
+
+.card small{
+color:var(--gold);
+letter-spacing:.16em;
+font-weight:800
+}
+
+.card h3{
+font-size:25px;
+margin:35px 0 10px
+}
+
+.card p{
+color:var(--muted)
+}
+
+.vision{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:70px;
+align-items:center
+}
+
+.goldline{
+height:1px;
+background:linear-gradient(
+90deg,
+var(--gold),
+transparent
+);
+margin:30px 0
+}
+
+.vision-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px
+}
+
+.vision-list div{
+background:#111;
+border:1px solid var(--line);
+padding:22px
+}
+
+.vision-list b{
+display:block;
+font-size:17px;
+margin-bottom:5px
+}
+
+.vision-list span{
+color:var(--muted);
+font-size:13px
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.project{
+position:relative;
+min-height:330px;
+overflow:hidden;
+border:1px solid var(--line);
+background:#111
+}
+
+.project img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+filter:saturate(.78)
+}
+
+.project:hover img{
+transform:scale(1.04)
+}
+
+.project::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+0deg,
+rgba(0,0,0,.9),
+transparent 60%
+)
+}
+
+.project-info{
+position:absolute;
+z-index:2;
+left:24px;
+right:24px;
+bottom:22px
+}
+
+.project-info small{
+color:var(--gold2);
+font-weight:800;
+letter-spacing:.13em
+}
+
+.project-info h3{
+font-size:25px;
+margin-top:6px
+}
+
+.project-info p{
+font-size:13px;
+color:#c3c0b9;
+margin-top:5px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:18px
+}
+
+.gallery .big{
+min-height:560px
+}
+
+.gallery-right{
+display:grid;
+gap:18px
+}
+
+.gallery-right div{
+min-height:270px
+}
+
+.gallery img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px
+}
+
+.contact-box{
+background:linear-gradient(
+145deg,
+#151515,
+#0b0b0b
+);
+border:1px solid var(--line);
+padding:30px
+}
+
+.contact-row{
+display:flex;
+justify-content:space-between;
+gap:20px;
+padding:18px 0;
+border-bottom:1px solid var(--line)
+}
+
+.contact-row:last-child{
+border-bottom:0
+}
+
+.contact-row span{
+color:var(--muted);
+text-align:right
+}
+
+.socials{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:25px
+}
+
+.social{
+border:1px solid var(--line);
+border-radius:999px;
+padding:10px 15px;
+font-size:13px
+}
+
+.final-cta{
+background:
+linear-gradient(
+120deg,
+#17130c,
+#0b0b0b
+);
+border:1px solid rgba(201,164,91,.28);
+padding:55px;
+text-align:center
+}
+
+.final-cta p{
+max-width:620px;
+margin:15px auto 25px;
+color:var(--muted)
+}
+
+footer{
+border-top:1px solid var(--line);
+padding:28px 0;
+color:#777;
+font-size:12px
+}
+
+footer .container{
+display:flex;
+justify-content:space-between;
+gap:20px
+}
+
+.reveal{
+opacity:0;
+transform:translateY(22px);
+transition:.7s ease
+}
+
+.reveal.show{
+opacity:1;
+transform:none
+}
+
+[dir="rtl"]{
+text-align:right
+}
+
+[dir="rtl"] nav{
+direction:rtl
+}
+
+[dir="rtl"] .quote{
+border-left:0;
+border-right:2px solid var(--gold);
+padding-left:0;
+padding-right:19px
+}
+
+[dir="rtl"] .contact-row span{
+text-align:left
+}
+
+@media(max-width:850px){
+
+nav{
+display:none;
+position:absolute;
+top:76px;
+left:0;
+right:0;
+padding:16px 4%;
+background:#090909;
+border-bottom:1px solid var(--line);
+flex-direction:column;
+align-items:stretch;
+gap:4px
+}
+
+nav.open{
+display:flex
+}
+
+nav a{
+padding:10px 0
+}
+
+.menu{
+display:block
+}
+
+.about,
+.vision,
+.contact{
+grid-template-columns:1fr;
+gap:35px
+}
+
+.cards,
+.projects{
+grid-template-columns:1fr
+}
+
+.section-head{
+display:block
+}
+
+.section-head .lead{
+margin-top:18px
+}
+
+.gallery{
+grid-template-columns:1fr
+}
+
+.gallery .big{
+min-height:390px
+}
+
+.gallery-right{
+grid-template-columns:1fr 1fr
+}
+
+.gallery-right div{
+min-height:230px
+}
+
+.final-cta{
+padding:35px 22px
+}
+
+footer .container{
+display:block
+}
+
+footer span+span{
+display:block;
+margin-top:7px
+}
+
+}
+
+@media(max-width:520px){
+
+.gallery-right{
+grid-template-columns:1fr
+}
+
+.gallery-right div{
+min-height:300px
+}
+
+h1{
+font-size:55px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+EBRAHIM <span>KHALED</span>
+</a>
+
+<button
+class="menu"
+onclick="document.querySelector('nav').classList.toggle('open')">
+Menu
+</button>
+
+<nav>
+
+<a href="#about"
+data-en="About"
+data-ar="نبذة">
+About
+</a>
+
+<a href="#expertise"
+data-en="Focus"
+data-ar="المجالات">
+Focus
+</a>
+
+<a href="#projects"
+data-en="Real Estate"
+data-ar="العقارات">
+Real Estate
+</a>
+
+<a href="#media"
+data-en="Media"
+data-ar="الإعلام">
+Media
+</a>
+
+<a href="#contact"
+data-en="Contact"
+data-ar="تواصل">
+Contact
+</a>
+
+<button class="lang" id="langBtn">
+عربي
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<img
+class="hero-bg"
+src="Image1.jpeg"
+alt="Ebrahim Khaled">
+
+<div class="container hero-content reveal">
+
+<div
+class="eyebrow"
+data-en="Real Estate • Leadership • Personal Brand"
+data-ar="العقارات • القيادة • العلامة الشخصية">
+
+Real Estate • Leadership • Personal Brand
+
+</div>
+
+<h1>
+Ebrahim <span>Khaled</span>
+</h1>
+
+<p
+data-en="A premium digital presence built around real estate, leadership, confidence and meaningful business relationships."
+data-ar="حضور رقمي احترافي يجمع بين العقارات والقيادة والثقة وبناء العلاقات التجارية المؤثرة.">
+
+A premium digital presence built around real estate, leadership, confidence and meaningful business relationships.
+
+</p>
+
+<div class="actions">
+
+<a
+class="btn primary"
+href="#contact"
+data-en="Get In Touch"
+data-ar="تواصل الآن">
+
+Get In Touch
+
+</a>
+
+<a
+class="btn secondary"
+href="#about"
+data-en="Explore Profile"
+data-ar="استكشف الملف">
+
+Explore Profile
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about">
+
+<div class="reveal">
+
+<img
+class="about-img"
+src="Image 8.jpeg"
+alt="Ebrahim Khaled portrait">
+
+</div>
+
+<div class="about-copy reveal">
+
+<div class="kicker">
+01 — About
+</div>
+
+<h2
+data-en="Vision first.<br>Leadership always."
+data-ar="الرؤية أولاً.<br>والقيادة دائماً.">
+
+Vision first.<br>
+Leadership always.
+
+</h2>
+
+<p
+data-en="This personal brand website brings together Ebrahim Khaled’s professional presence, real-estate focus and leadership mindset in one premium digital identity."
+data-ar="هذا الموقع يجمع الحضور المهني لإبراهيم خالد وتركيزه في مجال العقارات وعقلية القيادة في هوية رقمية احترافية واحدة.">
+
+This personal brand website brings together Ebrahim Khaled’s professional presence, real-estate focus and leadership mindset in one premium digital identity.
+
+</p>
+
+<p
+data-en="The visual direction is inspired by Dubai, executive photography, professional recognition and messages around confidence, success and high performance."
+data-ar="التصميم مستوحى من أجواء دبي والصور التنفيذية والتكريمات المهنية ورسائل الثقة والنجاح والأداء العالي.">
+
+The visual direction is inspired by Dubai, executive photography, professional recognition and messages around confidence, success and high performance.
+
+</p>
+
+<div
+class="quote"
+data-en="Every new beginning is an opportunity to achieve greater results."
+data-ar="كل بداية جديدة هي فرصة لتحقيق نتائج أكبر.">
+
+Every new beginning is an opportunity to achieve greater results.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOCUS -->
+
+<section id="expertise" class="dark">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+02 — Focus
+</div>
+
+<h2
+data-en="What the brand stands for"
+data-ar="ماذا تمثل العلامة الشخصية؟">
+
+What the brand stands for
+
+</h2>
+
+</div>
+
+<p
+class="lead"
+data-en="A restrained luxury aesthetic that keeps the person, expertise and message at the center."
+data-ar="هوية فاخرة وهادئة تضع الشخص والخبرة والرسالة في مركز الاهتمام.">
+
+A restrained luxury aesthetic that keeps the person, expertise and message at the center.
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<article class="card reveal">
+
+<small>
+01 / REAL ESTATE
+</small>
+
+<h3
+data-en="Real Estate"
+data-ar="العقارات">
+
+Real Estate
+
+</h3>
+
+<p
+data-en="A professional space for real-estate opportunities, projects and client-focused communication."
+data-ar="مساحة احترافية للفرص والمشروعات العقارية والتواصل مع العملاء.">
+
+A professional space for real-estate opportunities, projects and client-focused communication.
+
+</p>
+
+</article>
+
+
+<article class="card reveal">
+
+<small>
+02 / LEADERSHIP
+</small>
+
+<h3
+data-en="Leadership"
+data-ar="القيادة">
+
+Leadership
+
+</h3>
+
+<p
+data-en="Content centered on vision, confidence, discipline, high performance and building strong teams."
+data-ar="محتوى يركز على الرؤية والثقة والانضباط والأداء العالي وبناء فرق قوية.">
+
+Content centered on vision, confidence, discipline, high performance and building strong teams.
+
+</p>
+
+</article>
+
+
+<article class="card reveal">
+
+<small>
+03 / PERSONAL BRAND
+</small>
+
+<h3
+data-en="Personal Brand"
+data-ar="العلامة الشخصية">
+
+Personal Brand
+
+</h3>
+
+<p
+data-en="One digital home connecting social presence, achievements, media and direct contact."
+data-ar="واجهة رقمية واحدة تجمع السوشيال ميديا والإنجازات والمحتوى ووسائل التواصل.">
+
+One digital home connecting social presence, achievements, media and direct contact.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VISION -->
+
+<section id="vision">
+
+<div class="container vision">
+
+<div class="reveal">
+
+<div class="kicker">
+03 — Vision
+</div>
+
+<h2
+data-en="Inspired by vision.<br><span class='gold'>Driven by leadership.</span>"
+data-ar="مستوحى من الرؤية.<br><span class='gold'>مدفوع بالقيادة.</span>">
+
+Inspired by vision.<br>
+<span class="gold">
+Driven by leadership.
+</span>
+
+</h2>
+
+<div class="goldline"></div>
+
+<p
+class="lead"
+data-en="The experience is designed to communicate a confident, modern and executive presence associated with Dubai real estate."
+data-ar="تم تصميم التجربة لتعكس حضوراً واثقاً وعصرياً واحترافياً مرتبطاً بمجال العقارات في دبي.">
+
+The experience is designed to communicate a confident, modern and executive presence associated with Dubai real estate.
+
+</p>
+
+</div>
+
+
+<div class="vision-list reveal">
+
+<div>
+
+<b
+data-en="Confidence"
+data-ar="الثقة">
+
+Confidence
+
+</b>
+
+<span
+data-en="Show up with clarity and conviction."
+data-ar="الحضور بوضوح وثبات.">
+
+Show up with clarity and conviction.
+
+</span>
+
+</div>
+
+
+<div>
+
+<b
+data-en="Success"
+data-ar="النجاح">
+
+Success
+
+</b>
+
+<span
+data-en="Focus on meaningful progress."
+data-ar="التركيز على التقدم الحقيقي.">
+
+Focus on meaningful progress.
+
+</span>
+
+</div>
+
+
+<div>
+
+<b
+data-en="High Performance"
+data-ar="الأداء العالي">
+
+High Performance
+
+</b>
+
+<span
+data-en="Keep raising the standard."
+data-ar="الاستمرار في رفع المستوى.">
+
+Keep raising the standard.
+
+</span>
+
+</div>
+
+
+<div>
+
+<b
+data-en="Opportunity"
+data-ar="الفرصة">
+
+Opportunity
+
+</b>
+
+<span
+data-en="Turn new beginnings into action."
+data-ar="تحويل البدايات الجديدة إلى خطوات عملية.">
+
+Turn new beginnings into action.
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REAL ESTATE -->
+
+<section id="projects" class="dark">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+04 — Real Estate
+</div>
+
+<h2
+data-en="A home for future opportunities"
+data-ar="واجهة للفرص العقارية القادمة">
+
+A home for future opportunities
+
+</h2>
+
+</div>
+
+<p
+class="lead"
+data-en="This section is ready to be populated with verified projects, launches, locations and investment opportunities."
+data-ar="هذا القسم جاهز لإضافة المشروعات الموثقة والإطلاقات والمواقع والفرص الاستثمارية.">
+
+This section is ready to be populated with verified projects, launches, locations and investment opportunities.
+
+</p>
+
+</div>
+
+
+<div class="projects">
+
+
+<article class="project reveal">
+
+<img
+src="Image2.jpeg"
+alt="Real estate personal brand">
+
+<div class="project-info">
+
+<small>
+DUBAI / UAE
+</small>
+
+<h3
+data-en="Featured Opportunities"
+data-ar="فرص مميزة">
+
+Featured Opportunities
+
+</h3>
+
+<p
+data-en="Projects and opportunities can be added here."
+data-ar="يمكن إضافة المشروعات والفرص هنا.">
+
+Projects and opportunities can be added here.
+
+</p>
+
+</div>
+
+</article>
+
+
+<article class="project reveal">
+
+<img
+src="Image3.jpeg"
+alt="Professional recognition">
+
+<div class="project-info">
+
+<small>
+PROFESSIONAL
+</small>
+
+<h3
+data-en="Professional Network"
+data-ar="شبكة مهنية">
+
+Professional Network
+
+</h3>
+
+<p
+data-en="A premium area for partnerships and business relationships."
+data-ar="مساحة احترافية للشراكات والعلاقات التجارية.">
+
+A premium area for partnerships and business relationships.
+
+</p>
+
+</div>
+
+</article>
+
+
+<article class="project reveal">
+
+<img
+src="Image4.jpeg"
+alt="Executive portrait">
+
+<div class="project-info">
+
+<small>
+PERSONAL BRAND
+</small>
+
+<h3
+data-en="Built on Trust"
+data-ar="مبني على الثقة">
+
+Built on Trust
+
+</h3>
+
+<p
+data-en="A clear presentation of experience, values and professional identity."
+data-ar="عرض واضح للخبرة والقيم والهوية المهنية.">
+
+A clear presentation of experience, values and professional identity.
+
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEDIA -->
+
+<section id="media">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+05 — Media
+</div>
+
+<h2
+data-en="Moments & Recognition"
+data-ar="لحظات وتكريمات">
+
+Moments & Recognition
+
+</h2>
+
+</div>
+
+<p
+class="lead"
+data-en="Selected visuals from the supplied social-media material, presented as a professional media wall."
+data-ar="مجموعة مختارة من الصور التي تم إرسالها من المحتوى الاجتماعي، بتقديم احترافي.">
+
+Selected visuals from the supplied social-media material, presented as a professional media wall.
+
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="big reveal">
+
+<img
+src="Image6.jpeg"
+alt="Recognition and professional media">
+
+</div>
+
+<div class="gallery-right">
+
+<div class="reveal">
+
+<img
+src="Image5.jpeg"
+alt="Professional appearance">
+
+</div>
+
+<div class="reveal">
+
+<img
+src="Image 7.jpeg"
+alt="Executive portrait">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="dark">
+
+<div class="container">
+
+<div class="final-cta reveal">
+
+<div class="kicker">
+06 — Connect
+</div>
+
+<h2
+data-en="Let’s build the next opportunity."
+data-ar="لنصنع الفرصة القادمة.">
+
+Let’s build the next opportunity.
+
+</h2>
+
+<p
+data-en="For real-estate opportunities, professional collaboration or business enquiries, connect through the social channels below."
+data-ar="للفرص العقارية أو التعاون المهني أو الاستفسارات التجارية، تواصل من خلال قنوات التواصل التالية.">
+
+For real-estate opportunities, professional collaboration or business enquiries, connect through the social channels below.
+
+</p>
+
+<a
+class="btn primary"
+href="#contact"
+data-en="Contact Ebrahim"
+data-ar="تواصل مع إبراهيم">
+
+Contact Ebrahim
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<div class="reveal">
+
+<div class="kicker">
+07 — Contact
+</div>
+
+<h2
+data-en="Let’s connect."
+data-ar="لنتواصل.">
+
+Let’s connect.
+
+</h2>
+
+<p
+class="lead"
+style="margin-top:20px"
+data-en="For business enquiries and professional collaboration, use the channels below."
+data-ar="للاستفسارات التجارية والتعاون المهني، استخدم وسائل التواصل التالية.">
+
+For business enquiries and professional collaboration, use the channels below.
+
+</p>
+
+
+<div class="socials">
+
+<a
+class="social"
+href="https://www.instagram.com/ebrahim_khaled777/"
+target="_blank"
+rel="noopener">
+
+Instagram
+
+</a>
+
+<a
+class="social"
+href="https://www.facebook.com/"
+target="_blank"
+rel="noopener">
+
+Facebook
+
+</a>
+<a
+class="social"
+href="https://wa.me/971585851275"
+target="_blank"
+rel="noopener">
+
+whatsapp
+
+</a>
+<a
+class="social"
+href="https://www.tiktok.com/@ebrahim_khaled99?_r=1&_t=ZS-98g1qn3Vden"
+target="_blank"
+rel="noopener">
+
+tiktok
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-box reveal">
+
+<div class="contact-row">
+
+<b
+data-en="Location"
+data-ar="الموقع">
+
+Location
+
+</b>
+
+<span
+data-en="Dubai, UAE"
+data-ar="دبي، الإمارات">
+
+Dubai, UAE
+
+</span>
+
+</div>
+
+
+<div class="contact-row">
+
+<b
+data-en="Focus"
+data-ar="التخصص">
+
+Focus
+
+</b>
+
+<span
+data-en="Real Estate & Leadership"
+data-ar="العقارات والقيادة">
+
+Real Estate & Leadership
+
+</span>
+
+</div>
+
+
+<div class="contact-row">
+
+<b
+data-en="Instagram"
+data-ar="إنستجرام">
+
+Instagram
+
+</b>
+
+<span>
+@ebrahim_khaled777
+</span>
+
+</div>
+
+
+<div class="contact-row">
+
+<b
+data-en="Enquiries"
+data-ar="الاستفسارات">
+
+Enquiries
+
+</b>
+
+<span
+data-en="Business & Professional"
+data-ar="تجارية ومهنية">
+
+Business & Professional
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<span>
+© <span id="year"></span>
+mohamed Khaled. All rights reserved.
+</span>
+
+<span>
+Premium Personal Brand • Dubai, UAE
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+let lang="en";
+
+const btn=document.getElementById("langBtn");
+
+function setLang(next){
+
+lang=next;
+
+document.documentElement.lang=lang;
+
+document.documentElement.dir=
+lang==="ar"?"rtl":"ltr";
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+
+el.innerHTML=
+el.dataset[
+lang==="ar"?"ar":"en"
+];
+
+});
+
+btn.textContent=
+lang==="ar"?"English":"عربي";
+
+}
+
+btn.addEventListener(
+"click",
+()=>setLang(lang==="en"?"ar":"en")
+);
+
+document.getElementById("year").textContent=
+new Date().getFullYear();
+
+
+const observer=
+new IntersectionObserver(
+entries=>
+entries.forEach(e=>{
+if(e.isIntersecting)
+e.target.classList.add("show")
+}),
+{threshold:.1}
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(el=>observer.observe(el));
+
+
+document
+.querySelectorAll("nav a")
+.forEach(a=>
+a.addEventListener(
+"click",
+()=>document
+.querySelector("nav")
+.classList.remove("open")
+)
+);
+
+</script>
+
+</body>
+</html>
